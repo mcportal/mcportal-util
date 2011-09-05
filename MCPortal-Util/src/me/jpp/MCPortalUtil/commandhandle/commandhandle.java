@@ -30,8 +30,19 @@ public class commandhandle{
 
 	public boolean cmdhandle(CommandSender sender, Command cmd, String commandLabel, String[] args){
 		
+		
+		//ALL COMMANDS BELOW REQUIRE YOU TO NOT BE CONSOLE
+		
+		if(!(sender instanceof Player)) {
+			sender.sendMessage("You must be logged in!");
+			return true;
+		}
+		Player player = (Player)sender;
+		
+		
+		
 		if(cmd.getName().equalsIgnoreCase("kickall")){
-			if(!common.playerCan("kickall", (Player) sender) || !sender.isOp()){
+			if(!common.playerCan("kickall", (Player) sender)){
 				sender.sendMessage(ChatColor.RED+"You don't have permission to access that command");
 				return true;
 			}
@@ -43,13 +54,6 @@ public class commandhandle{
 			}
 		}
 		
-		//ALL COMMANDS BELOW REQUIRE YOU TO NOT BE CONSOLE
-		
-		if(!(sender instanceof Player)) {
-			sender.sendMessage("You must be logged in!");
-			return true;
-		}
-		Player player = (Player)sender;
 	
 		if(cmd.getName().equalsIgnoreCase("mcpreload")){
 			if(!common.playerCan("mcpreload", player)){
