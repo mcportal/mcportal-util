@@ -1,0 +1,49 @@
+name: MCPortal-Util
+main: me.jpp.MCPortalUtil.MCPortalUtil
+version: 0.9-DEV
+author: JPP
+
+commands:
+   report:
+         description: Report a rule-breaker to the Server Administrators
+         permission: mcputil.report.report
+         usage: /report [player] [reason]
+   verifyforum:
+         description: Tie a Minecraft IGN to a MCPortal Forum Account
+         permission: mcputil.verifyforum
+         usage: /verifyforum [8 CHAR STRING]
+   tp:
+         description: Teleport to a player
+         permission: mcputil.teleport.tp
+         usage: /tp [player]
+   tptoggle:
+         description: Toggle teleportation
+         permission: mcputil.teleport.tptoggle
+         usage: /tptoggle
+   tpo:
+         description: Teleport to a player, ignoring their tptoggle
+         permission: mcputil.teleport.tpo
+   tpc:
+         description: Teleport to a Co-ordinate set
+         permission: mcputil.teleport.tpcoord
+         usage: /tpc [x] [y] [z] {world}
+   mcpreload:
+         description: Reload the MCPortal Configuration
+         permission: mcputil.mcpreload
+   mcpgod:
+         description: Become a god of your world!
+         permission: mcputil.god.god
+   hub:
+         description: Teleport to the portal hub
+         permission: mcputil.hub.hub
+   sethub:
+         description: Set the location of the portal hub
+         permission: mcputil.hub.sethub
+   player:
+         description: Get info about a certain player
+         permission: mcputil.player.player
+         usage: /user [player name]
+   kickall:
+         description: Kick all players with an optional reason
+         permission: mcputil.kickall
+         usage: /kickall {reason}
